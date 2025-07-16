@@ -1,0 +1,4 @@
+Furniture
+Gadget
+Groceries
+Lightning
