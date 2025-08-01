@@ -4,6 +4,7 @@ import java.time.LocalDate;
 public class Expenditure {
 
     private String code;
+    private String accountNumber;
     private double amount;
     private LocalDate date;
     private String phase;
@@ -45,6 +46,9 @@ public class Expenditure {
     
     public String getAccountUsed() {
         return accountUsed;
+    }
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
     public String getReceiptPath() {

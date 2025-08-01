@@ -269,7 +269,7 @@ public class ExpenditureManager {
     // search by Cost
     public void searchByCostRange(double minAmount, double maxAmount) {
         boolean found = false;
-        System.out.println("🔍 Expenditures between GH₵" + minAmount + " and GH₵" + maxAmount + ":");
+        System.out.println("Expenditures between GH₵" + minAmount + " and GH₵" + maxAmount + ":");
 
         for (Expenditure exp : expenditures.values()) {
             double amt = exp.getAmount();
@@ -322,9 +322,11 @@ public class ExpenditureManager {
         return expenditureMap.getOrDefault(code, null);
     }
 
+
+    // Search by date 
     public void searchByDateRange(LocalDate start, LocalDate end) {
     boolean found = false;
-    System.out.println("🔍 Expenditures between " + start + " and " + end + ":");
+    System.out.println("Expenditures between " + start + " and " + end + ":");
 
     for (Expenditure exp : expenditures.values()) {
         if (!exp.getDate().isBefore(start) && !exp.getDate().isAfter(end)) {
@@ -339,9 +341,11 @@ public class ExpenditureManager {
     }
     }
 
+
+    // Search by bank account
     public void searcchByBankAccount(String account) {
         boolean found = false;
-        System.out.println("🔍 Expenditures using account: " + account);
+        System.out.println("Expenditures using account: " + account);
 
         for (Expenditure exp : expenditures.values()) {
             if (exp.getAccountUsed().equalsIgnoreCase(account)) {
